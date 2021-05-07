@@ -1,8 +1,10 @@
 from tkinter import *
 root = Tk()
 root.title("Calculator")
+frame = LabelFrame(root, padx=10, pady=10)
+frame.pack(padx=20, pady=20)
 
-screen = Entry(root, width=45, borderwidth=10)
+screen = Entry(frame, width=45, borderwidth=10)
 screen.grid(row=0, column=0, columnspan=3)
 
 
@@ -58,27 +60,27 @@ def equal_button():
 
 
 #Define the button:
-button_1 = Button(root, text="1", padx=40, pady = 20, command=lambda: click_button(1))
-button_2 = Button(root, text="2", padx=40, pady = 20, command=lambda: click_button(2))
-button_3 = Button(root, text="3", padx=40, pady = 20, command=lambda: click_button(3))
+button_1 = Button(frame, text="1", padx=40, pady = 20, command=lambda: click_button(1))
+button_2 = Button(frame, text="2", padx=40, pady = 20, command=lambda: click_button(2))
+button_3 = Button(frame, text="3", padx=40, pady = 20, command=lambda: click_button(3))
 
-button_4 = Button(root, text="4", padx=40, pady = 20, command=lambda: click_button(4))
-button_5 = Button(root, text="5", padx=40, pady = 20, command=lambda: click_button(5))
-button_6 = Button(root, text="6", padx=40, pady = 20, command=lambda: click_button(6))
+button_4 = Button(frame, text="4", padx=40, pady = 20, command=lambda: click_button(4))
+button_5 = Button(frame, text="5", padx=40, pady = 20, command=lambda: click_button(5))
+button_6 = Button(frame, text="6", padx=40, pady = 20, command=lambda: click_button(6))
 
-button_7 = Button(root, text="7", padx=40, pady = 20, command=lambda: click_button(7))
-button_8 = Button(root, text="8", padx=40, pady = 20, command=lambda: click_button(8))
-button_9 = Button(root, text="9", padx=40, pady = 20, command=lambda: click_button(9))
+button_7 = Button(frame, text="7", padx=40, pady = 20, command=lambda: click_button(7))
+button_8 = Button(frame, text="8", padx=40, pady = 20, command=lambda: click_button(8))
+button_9 = Button(frame, text="9", padx=40, pady = 20, command=lambda: click_button(9))
 
-button_0 = Button(root, text="0", padx=40, pady = 20, command=lambda: click_button(0))
-button_add = Button(root, text="+", padx=25, pady = 10, command=add_button)
-button_substract = Button(root, text="-", padx=25, pady = 10, command=substract_button)
+button_0 = Button(frame, text="0", padx=40, pady = 20, command=lambda: click_button(0))
+button_add = Button(frame, text="+", padx=25, pady = 10, command=add_button)
+button_substract = Button(frame, text="-", padx=25, pady = 10, command=substract_button)
 
-button_equal = Button(root, text="=", padx=39, pady = 20, command=equal_button)
-button_multiply = Button(root, text="*", padx=26, pady = 10, command=multiply_button)
-button_division = Button(root, text="/", padx=25, pady = 10, command=division_button)
+button_equal = Button(frame, text="=", padx=39, pady = 20, command=equal_button)
+button_multiply = Button(frame, text="*", padx=26, pady = 10, command=multiply_button)
+button_division = Button(frame, text="/", padx=25, pady = 10, command=division_button)
 
-button_clear = Button(root, text="Clear", padx=120, pady = 20, command=clear_button)
+button_clear = Button(frame, text="Clear", padx=130, pady = 20, command=clear_button)
 
 
 
